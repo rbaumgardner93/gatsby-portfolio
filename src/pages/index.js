@@ -8,7 +8,7 @@ import Contact from '../components/Pages/contact';
 
 const IndexPage = ({ data }) => (
   <div>
-    <Images
+    <Image
       alt="Cup of coffee and pencil"
       sizes={data.headerImage.sizes}
       style={{
@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => (
     <About />
     <div>
       <Projects />
-      <Images
+      <Image
         alt="Now brewing sign"
         sizes={data.projectImage.sizes}
         style={{
