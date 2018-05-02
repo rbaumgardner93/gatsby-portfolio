@@ -4,6 +4,8 @@ import Link from 'gatsby-link';
 import glamorous, { ThemeProvider } from 'glamorous';
 import { css, before } from 'glamor';
 
+import nexterLogo from '../../images/favicon.png';
+import clearviewLogo from '../../images/clearview-logo.png';
 // $grid-width: 114rem;
 // $gutter-vertical: 8rem;
 // $gutter-vertical-small: 6rem;
@@ -17,17 +19,31 @@ const Container = glamorous.section({
   zIndex: 3,
   position: 'absolute',
   boxSizing: 'inherit',
-  paddingRight: '4rem',
   marginTop: '-5rem',
-  paddingTop: '2rem',
+  padding: '6rem 8rem 6rem 4rem',
+  display: 'block',
 
   '@media(max-width: 75em)': {
+    padding: '6rem 4rem',
     marginTop: '-8rem',
-    padding: 0,
+  },
+
+  '@media(max-width: 62.5em)': {
+    padding: '6rem 4rem',
   },
 
   '@media(max-width: 56.25em)': {
     marginBottom: '1rem',
+    padding: '1rem 2rem',
+    alignItems: 'center',
+  },
+
+  '@media(max-width: 37.25em)': {
+    padding: '0 .5rem',
+  },
+
+  '@media(max-width: 26em)': {
+    padding: 0,
   },
 });
 
@@ -37,6 +53,14 @@ const HeaderDiv = glamorous.div({
   width: '100%',
   transform: 'skewY(7deg)',
   position: 'relative',
+
+  '@media(max-width: 37.25em)': {
+    marginBottom: 0,
+  },
+
+  '@media(max-width: 26em)': {
+    marginBottom: 0,
+  },
 });
 
 const ProjectTitle = glamorous.h2({
@@ -67,8 +91,12 @@ const ProjectTitle = glamorous.h2({
   },
 
   '@media(max-width: 56.25em)': {
-    fontSize: '1.7rem',
+    fontSize: '2rem',
     marginTop: 0,
+  },
+
+  '@media(max-width: 26em)': {
+    fontSize: '1.4rem',
   },
 });
 
@@ -78,97 +106,124 @@ const Row = glamorous.div({
   alignItems: 'center',
   position: 'relative',
   boxSizing: 'inherit',
-
-  transform: 'skewY(7deg)',
-  opacity: 0.9,
+  justifyContent: 'space-between',
   height: '60%',
   width: '100%',
 
-  '@media(max-width: 75em)': {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    height: '100vh',
-    marginTop: '-1rem',
-  },
-});
+  transform: 'skewY(7deg)',
+  opacity: 0.9,
 
-const Column = glamorous.div({
-  position: 'relative',
-  margin: '0 1rem',
-  height: '100%',
-  width: '25%',
-  display: 'flex',
-  flexDirection: 'row',
-
-  '@media(max-width: 75em)': {
-    display: 'flex',
+  '@media(max-width: 56.25em)': {
     flexDirection: 'column',
-    width: '50%',
+    height: '85%',
   },
 });
 
 const Card = glamorous.div({
   position: 'relative',
-  display: 'flex',
+  display: 'block',
+  margin: '.5rem',
+  padding: '2rem',
+  textAlign: 'center',
   backgroundColor: '#212121',
   borderRadius: '3px',
   boxShadow: '0 1rem 2.5rem rgba(0, 0, 0, 0.15)',
   transition: 'transform .3s',
-  height: '90%',
+  height: '100%',
   width: '100%',
-  '&:last-child': {
-    marginRight: 0,
-  },
   ':hover': {
     transform: 'translateY(-1.5rem) scale(1.03)',
   },
+
+  '@media(max-width: 62.5em)': {
+    padding: '.8rem',
+  },
+
+  '@media(max-width: 56.25em)': {
+    padding: '.1rem',
+    width: '50%',
+    height: '100%',
+  },
+
+  '@media(max-width: 37.5em)': {
+    padding: '.2rem',
+  },
 });
 
-const Iframe = glamorous.iframe({
-  height: '100%',
-  width: '100%',
-  border: 'none',
+const SiteLogo = glamorous.img({
+  height: '60px',
+  width: '60px',
+  marginTop: '.2rem',
+
+  '@media(max-width: 62.5em)': {
+    height: '40px',
+    width: '40px',
+  },
+
+  '@media(max-width: 26em)': {
+    height: '35px',
+    width: '35px',
+    marginBottom: '.4rem',
+  },
+
+  '@media(max-width: 24em)': {
+    height: '20px',
+    width: '20px',
+    marginBottom: '.4rem',
+  },
+});
+
+const SiteName = glamorous.h3({
+  fontWeight: 700,
   margin: 0,
-  padding: 0,
-});
-
-const ComingSoon = glamorous.div({
-  height: '100%',
   width: '100%',
-  position: 'absolute',
-  margin: 0,
-  padding: 0,
-});
-
-const P = glamorous.p({
-  position: 'relative',
-  fontSize: '2rem',
-  textAlign: 'center',
-  top: '20%',
   color: '#faf9f9',
-  transform: 'skewY(-7deg)',
+  borderBottom: '1px solid #faf9f9',
+  paddingBottom: '1rem',
+  position: 'relative',
+
+  '@media(max-width: 62.5em)': {
+    fontSize: '1.1rem',
+  },
+
+  '@media(max-width: 56.25em)': {
+    fontSize: '.9rem',
+    paddingBottom: '.5rem',
+  },
+
+  '@media(max-width: 24em)': {
+    fontSize: '.8rem',
+    paddingBottom: '.1rem',
+  },
 });
 
-const LinkRow = glamorous.div({
-  display: 'flex',
-  flexDirection: 'column',
-  alignSelf: 'flex-end',
-  alignItems: 'center',
-  position: 'absolute',
-  height: 'auto',
-  width: '100%',
+const SiteDescription = glamorous.p({
+  color: '#faf9f9',
+  paddingTop: '1rem',
+  textAlign: 'center',
+  position: 'relative',
 
-  '@media(max-width: 75em)': {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    position: 'relative',
-    width: '100%',
+  '@media(max-width: 56.25em)': {
+    fontSize: '.8rem',
+    paddingTop: '.5rem',
+    marginBottom: '.2rem',
+  },
+
+  '@media(max-width: 26em)': {
+    fontSize: '.7rem',
+    paddingBottom: '.8rem',
+    marginBottom: '.4rem',
+  },
+
+  '@media(max-width: 24em)': {
+    fontSize: '.6rem',
+    paddingBottom: '.8rem',
+    margin: '.1rem',
   },
 });
 
 const SiteLink = glamorous.a({
+  textAlign: 'center',
   position: 'relative',
   display: 'inline-block',
   cursor: 'pointer',
@@ -195,6 +250,34 @@ const SiteLink = glamorous.a({
   '@media(max-width: 75em)': {
     fontSize: '1rem',
   },
+
+  '@media(max-width: 56.25em)': {
+    fontSize: '.8rem',
+    paddingTop: 0,
+  },
+
+  '@media(max-width: 26em)': {
+    fontSize: '.7rem',
+  },
+});
+
+const P = glamorous.p({
+  display: 'inline-block',
+  position: 'relative',
+  fontSize: '2rem',
+  textAlign: 'center',
+  top: '30%',
+  color: '#faf9f9',
+  transform: 'skewY(-7deg)',
+
+  '@media(max-width: 56.25em)': {
+    textAlign: 'center',
+  },
+
+  '@media(max-width: 37.5em)': {
+    left: 0,
+    top: '10%',
+  },
 });
 
 const ProjectPage = () => (
@@ -203,48 +286,38 @@ const ProjectPage = () => (
       <ProjectTitle>Projects</ProjectTitle>
     </HeaderDiv>
     <Row>
-      <Column>
-        <Card>
-          <Iframe src="https://rbaumgardner93.github.io/travel-agency-site/" />
-        </Card>
-        <LinkRow>
-          <SiteLink
-            href="https://rbaumgardner93.github.io/travel-agency-site/"
-            target="
-            _blank"
-          >
-            Visit Site &rarr;
-          </SiteLink>
-        </LinkRow>
-      </Column>
-      <Column>
-        <Card>
-          <Iframe src="https://rbaumgardner93.github.io/nexter-project/" />
-        </Card>
-        <LinkRow>
-          <SiteLink
-            href="https://rbaumgardner93.github.io/nexter-project/"
-            target="
-            _blank"
-          >
-            Visit Site &rarr;
-          </SiteLink>
-        </LinkRow>
-      </Column>
-      <Column>
-        <Card>
-          <ComingSoon>
-            <P>Coming Soon!</P>
-          </ComingSoon>
-        </Card>
-      </Column>
-      <Column>
-        <Card>
-          <ComingSoon>
-            <P>Coming Soon!</P>
-          </ComingSoon>
-        </Card>
-      </Column>
+      <Card>
+        <SiteLogo src={nexterLogo} />
+        <SiteName>Nexter</SiteName>
+        <SiteDescription>
+          Built With: SASS, HTML5, and CSS Grid.
+        </SiteDescription>
+        <SiteLink
+          href="https://rbaumgardner93.github.io/nexter-project/"
+          target="_blank"
+        >
+          Visit Site &rarr;
+        </SiteLink>
+      </Card>
+      <Card>
+        <SiteLogo src={clearviewLogo} css={{ borderRadius: '50px' }} />
+        <SiteName>Clear View Escapes</SiteName>
+        <SiteDescription>
+          Built With: PostCSS, HTML5, JavaScript, Webpack and Gulp.
+        </SiteDescription>
+        <SiteLink
+          href="https://rbaumgardner93.github.io/travel-agency-site/"
+          target="_blank"
+        >
+          Visit Site &rarr;
+        </SiteLink>
+      </Card>
+      <Card>
+        <P>Coming Soon!</P>
+      </Card>
+      <Card>
+        <P>Coming Soon!</P>
+      </Card>
     </Row>
   </Container>
 );

@@ -40,6 +40,7 @@ const Layout = ({ children, data, props }) => (
         padding: '2rem 2rem 0 2rem',
         maxWidth: 'auto',
         minHeight: '70vh',
+        display: 'block',
 
         '@media(max-width: 75em)': {
           padding: 0,

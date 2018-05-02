@@ -28,6 +28,7 @@ const IndexPage = ({ data }) => (
         alt="Now brewing sign"
         sizes={data.projectImage.sizes}
         style={{
+          display: 'block',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           transform: 'skewY(-7deg)',
