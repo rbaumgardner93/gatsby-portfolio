@@ -40,26 +40,26 @@ const Logo = glamorous.img({
     transform: 'scale(1.1)',
   },
 
+  '@media(min-width: 150em)': {
+    height: '16rem',
+    width: '16rem',
+  },
+
+  '@media(max-width: 112.5em)': {
+    height: '12rem',
+    width: '12rem',
+  },
+
+  '@media(max-width: 75em)': {
+    height: '10rem',
+    width: '10rem',
+  },
+
   '@media(max-width: 46.875em)': {
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
     margin: '1rem 0 0 0',
-  },
-
-  '@media(min-width: 75em)': {
-    height: '10rem',
-    width: '10rem',
-  },
-
-  '@media(min-width: 112.5em)': {
-    height: '12rem',
-    width: '12rem',
-  },
-
-  '@media(min-width: 150em)': {
-    height: '16rem',
-    width: '16rem',
   },
 });
 
