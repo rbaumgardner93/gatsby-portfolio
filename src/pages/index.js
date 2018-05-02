@@ -1,6 +1,6 @@
 //@ts-nocheck
 import React from 'react';
-import Image from 'gatsby-image';
+import Images from 'gatsby-image';
 import Header from '../components/header';
 import About from '../components/Pages/about';
 import Projects from '../components/Pages/projects';
@@ -8,7 +8,7 @@ import Contact from '../components/Pages/contact';
 
 const IndexPage = ({ data }) => (
   <div>
-    <Image
+    <Images
       alt="Cup of coffee and pencil"
       sizes={data.headerImage.sizes}
       style={{
@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => (
     <About />
     <div>
       <Projects />
-      <Image
+      <Images
         alt="Now brewing sign"
         sizes={data.projectImage.sizes}
         style={{
