@@ -60,6 +60,8 @@ const Logo = glamorous.img({
     flexDirection: 'column',
     position: 'relative',
     margin: '1rem 0 0 0',
+    width: '8rem',
+    height: '8rem',
   },
 });
 
