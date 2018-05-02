@@ -14,16 +14,22 @@ const TextBox = glamorous.div({
   transform: 'translate(-50%, -50%)',
   textAlign: 'center',
 
-  '@media only screen and (max-width: 112.5em)': {
+  '@media(max-width: 112.5em)': {
     left: '40%',
   },
 
-  '@media only screen and (max-width: 56.25em)': {
+  '@media(max-width: 56.25em)': {
     left: '40%',
   },
 
-  '@media only screen and (max-width: 46.875em)': {
+  '@media(max-width: 46.875em)': {
     left: '50%',
+    top: '50%',
+  },
+
+  '@media(max-width: 23.4375em)': {
+    left: '50%',
+    top: '55%',
   },
 });
 

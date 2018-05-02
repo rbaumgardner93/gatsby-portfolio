@@ -13,15 +13,15 @@ const Container = glamorous.section({
   backgroundColor: '#212121',
   display: 'flex',
 
-  '@media only screen and (min-width: 150em)': {
+  '@media(min-width: 150em)': {
     lineHeight: 2,
   },
 
-  '@media only screen and (max-width: 112.5em)': {
+  '@media(max-width: 112.5em)': {
     marginBottom: '-2rem',
   },
 
-  '@media only screen and (max-width: 75em)': {
+  '@media(max-width: 75em)': {
     marginTop: '-8rem',
   },
 });
@@ -41,20 +41,20 @@ const AboutTitle = glamorous.h2({
   letterSpacing: '1px',
   padding: '1rem 1.875rem',
 
-  '@media only screen and (min-width: 150em)': {
+  '@media(min-width: 150em)': {
     fontSize: '3.5rem',
   },
 
-  '@media only screen and (max-width: 112.5em)': {
+  '@media(max-width: 112.5em)': {
     fontSize: '3rem',
     paddingTop: '2rem',
   },
 
-  '@media only screen and (max-width: 75em)': {
+  '@media(max-width: 75em)': {
     fontSize: '2.5rem',
   },
 
-  '@media only screen and (max-width: 56.25em)': {
+  '@media(max-width: 56.25em)': {
     fontSize: '1.7rem',
   },
 });
@@ -90,23 +90,23 @@ const P = glamorous.p({
   color: '#faf9f9',
   textAlign: 'justify',
 
-  '@media only screen and (min-width: 150em)': {
+  '@media(min-width: 150em)': {
     fontSize: '2rem',
   },
 
-  '@media only screen and(max-width: 112.5em)': {
+  '@media(max-width: 112.5em)': {
     fontSize: '1.5rem',
   },
 
-  '@media only screen and (max-width: 75em)': {
+  '@media(max-width: 75em)': {
     fontSize: '1.2rem',
   },
 
-  '@media only screen and (max-width: 56.25em)': {
+  '@media(max-width: 56.25em)': {
     fontSize: '1.1rem',
   },
 
-  '@media only screen and (max-width: 37.25em)': {
+  '@media(max-width: 37.25em)': {
     fontSize: '1rem',
   },
 });
@@ -132,23 +132,23 @@ const A = glamorous.a({
     borderBottom: 'none',
   },
 
-  '@media only screen and (min-width: 150em)': {
+  '@media(min-width: 150em)': {
     fontSize: '1.8rem',
   },
 
-  '@media only screen and (max-width: 112.5em)': {
+  '@media(max-width: 112.5em)': {
     fontSize: '1.4rem',
   },
 
-  '@media only screen and (max-width: 75em)': {
+  '@media(max-width: 75em)': {
     fontSize: '1.2rem',
   },
 
-  '@media only screen and (max-width: 56.25em)': {
+  '@media(max-width: 56.25em)': {
     fontSize: '1.1rem',
   },
 
-  '@media only screen and (max-width: 37.25em)': {
+  '@media(max-width: 37.25em)': {
     fontSize: '1rem',
   },
 });
@@ -175,29 +175,29 @@ const Photo = glamorous.img({
   paddingTop: '1.5rem',
   position: 'relative',
 
-  '@media only screen and (min-width: 150em)': {
+  '@media(min-width: 150em)': {
     width: '50%',
     height: '100%',
     paddingBottom: '2rem',
     paddingLeft: '4rem',
   },
 
-  '@media only screen and (max-width: 112.5em)': {
+  '@media(max-width: 112.5em)': {
     width: '55%',
     height: '75%',
   },
 
-  '@media only screen and (max-width: 75em)': {
+  '@media(max-width: 75em)': {
     width: '50%',
     height: '75%',
   },
 
-  '@media only screen and (max-width: 62.5em)': {
+  '@media(max-width: 62.5em)': {
     width: '35%',
     height: '75%',
   },
 
-  '@media only screen and (max-width: 56.25em)': {
+  '@media(max-width: 56.25em)': {
     width: '35%',
   },
 });

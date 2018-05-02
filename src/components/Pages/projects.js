@@ -120,7 +120,7 @@ const Card = glamorous.div({
   '&:last-child': {
     marginRight: 0,
   },
-  '&:hover': {
+  ':hover': {
     transform: 'translateY(-1.5rem) scale(1.03)',
   },
 });

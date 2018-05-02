@@ -18,7 +18,7 @@ const Button = glamorous.button({
     backgroundColor: '#303f9f',
     boxShadow: '0 1rem 2rem rgba(#000, 0.9))',
   },
-  '&:focus': {
+  ':focus': {
     outline: 'none',
     transform: 'translateY(2px)',
     boxShadow: '0 .5rem 1rem rgba(#000, 0.2)',

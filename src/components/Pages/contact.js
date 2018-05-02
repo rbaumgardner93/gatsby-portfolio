@@ -17,7 +17,7 @@ const ContactSection = glamorous.section({
   display: 'flex',
   flexDirection: 'column',
 
-  '@media only screen and (max-width: 46.875em)': {
+  '@media(max-width: 46.875em)': {
     padding: '15rem 2rem 5rem 2rem',
   },
 });
@@ -36,11 +36,11 @@ const Image = glamorous.div({
   display: 'flex',
   flexDirection: 'column',
 
-  '@media screen only and (min-width: 150em)': {
+  '@media(min-width: 150em)': {
     paddingBottom: '5rem',
   },
 
-  '@media screen only and (max-width: 46.875em)': {
+  '@media(max-width: 46.875em)': {
     backgroundImage: `linear-gradient(105deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%, transparent 50%), url(${contactImage})`,
     backgroundPosition: 'center',
   },

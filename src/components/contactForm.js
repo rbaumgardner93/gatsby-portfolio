@@ -10,11 +10,11 @@ const FormDiv = glamorous.div({
   padding: '4.5rem',
   display: 'block',
 
-  '@media only screen and (max-width: 56.25em)': {
+  '@media(max-width: 56.25em)': {
     padding: '4.5rem 1rem',
   },
 
-  '@media only screen and (max-width: 46.875em)': {
+  '@media(max-width: 46.875em)': {
     width: '100%',
   },
 });
@@ -46,23 +46,23 @@ const TextBox = glamorous.h2({
   border: 'none',
   textAlign: 'center',
 
-  '@media only screen and (min-width: 150em)': {
+  '@media(min-width: 150em)': {
     fontSize: '3.5rem',
   },
 
-  '@media only screen and (max-width: 112.5em)': {
+  '@media(max-width: 112.5em)': {
     fontSize: '3rem',
   },
 
-  '@media only screen and (max-width: 93.75em)': {
+  '@media(max-width: 93.75em)': {
     fontSize: '2.5rem',
   },
 
-  '@media only screen and (max-width: 75em)': {
+  '@media(max-width: 75em)': {
     fontSize: '2.5rem',
   },
 
-  '@media only screen and (max-width: 56.25em)': {
+  '@media(max-width: 56.25em)': {
     fontSize: '1.7rem',
   },
 });
@@ -80,12 +80,12 @@ const Input = glamorous.input({
   transition: 'all .3s',
   padding: '.7rem 1.2rem',
   marginBottom: '1rem',
-  '&:focus': {
+  ':focus': {
     outline: 'none',
     boxShadow: '0 1rem 2rem rgba(#212121, .1)',
     borderBottom: '3px solid #3f51b5',
   },
-  '&:focus:invalid': {
+  ':focus:invalid': {
     borderBottom: '3px solid #a50904',
   },
 });
@@ -98,7 +98,7 @@ const Description = glamorous.textarea({
   width: '100%',
   transition: 'all .3s',
   padding: '.7rem .2rem 2.5rem .7rem',
-  '&:focus': {
+  ':focus': {
     outline: 'none',
     boxShadow: '0 1rem 2rem rgba(#212121, .1)',
     border: '3px solid #3f51b5',
