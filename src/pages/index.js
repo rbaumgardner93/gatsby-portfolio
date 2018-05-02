@@ -1,6 +1,6 @@
 //@ts-nocheck
 import React from 'react';
-import Images from 'gatsby-image';
+import Image from 'gatsby-image';
 import Header from '../components/header';
 import About from '../components/Pages/about';
 import Projects from '../components/Pages/projects';
