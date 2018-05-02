@@ -4,8 +4,8 @@ import Link from 'gatsby-link';
 import glamorous, { ThemeProvider } from 'glamorous';
 import { css, before } from 'glamor';
 
-import nexterLogo from '../../images/favicon.png';
-import clearviewLogo from '../../images/clearview-logo.png';
+import nexter from '../../images/favicon.png';
+import clearview from '../../images/clearview.png';
 // $grid-width: 114rem;
 // $gutter-vertical: 8rem;
 // $gutter-vertical-small: 6rem;
@@ -150,7 +150,7 @@ const Card = glamorous.div({
   },
 });
 
-const SiteLogo = glamorous.img({
+const ProjectsLogo = glamorous.img({
   height: '60px',
   width: '60px',
   marginTop: '.2rem',
@@ -287,7 +287,7 @@ const ProjectPage = () => (
     </HeaderDiv>
     <Row>
       <Card>
-        <SiteLogo src={nexterLogo} />
+        <ProjectsLogo src={nexter} />
         <SiteName>Nexter</SiteName>
         <SiteDescription>
           Built With: SASS, HTML5, and CSS Grid.
@@ -300,7 +300,7 @@ const ProjectPage = () => (
         </SiteLink>
       </Card>
       <Card>
-        <SiteLogo src={clearviewLogo} css={{ borderRadius: '50px' }} />
+        <ProjectsLogo src={clearview} css={{ borderRadius: '50px' }} />
         <SiteName>Clear View Escapes</SiteName>
         <SiteDescription>
           Built With: PostCSS, HTML5, JavaScript, Webpack and Gulp.
