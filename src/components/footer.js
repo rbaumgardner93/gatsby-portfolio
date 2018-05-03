@@ -116,7 +116,7 @@ const Footer = () => (
         />
       </a>
       <a
-        href="https://twitter.com/Rbaum420"
+        href="https://twitter.com/rbaumgardner93"
         target="_blank"
         rel="nofollow"
         style={{

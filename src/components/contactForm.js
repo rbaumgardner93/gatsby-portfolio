@@ -107,19 +107,20 @@ const Description = glamorous.textarea({
 
 const ContactForm = () => (
   <FormDiv>
-    <Form action="#">
+    <Form method="post" action="#">
       <HeaderDiv>
         <TextBox>Contact</TextBox>
       </HeaderDiv>
       <InputDiv>
-        <Input type="text" placeholder="Full Name" id="name" />
-        <Input type="email" placeholder="Email" id="email" />
+        <Input type="text" name="name" placeholder="Full Name" id="name" />
+        <Input type="email" name="email" placeholder="Email" id="email" />
         <Description
           type="text"
           placeholder="Please enter a short project description..."
           id="description"
+          name="message"
         />
-        <SendButton />
+        <SendButton type="submit" />
       </InputDiv>
     </Form>
   </FormDiv>
